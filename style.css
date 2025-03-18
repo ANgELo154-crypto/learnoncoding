@@ -1,0 +1,1252 @@
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Felipa&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    scroll-behavior: smooth !important;
+    overflow-x: hidden;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    background: url(pics/newhaha.png) no-repeat center center/cover;
+    background-position: center;
+    background-size: 100%;
+    height: 100vh;
+    width: 100%;
+    max-width: 3000px;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+body {
+    background-color: #1e3e3e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header h1 {
+    font-size: 100px;
+    align-items: center;
+}
+
+header h3 {
+    font-size: 42px;
+    align-items: center;
+}
+
+.container {
+    margin-top: 120px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border: 0.2px solid white;
+    border-radius: 10px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+.icons a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons i {
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+.icons a:hover i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.social {
+    margin-top: 100px;
+    display: flex;
+    gap: 10px;
+}
+
+.social a {
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: url(VidGif/home.gif.gif) no-repeat center center;
+    background-position: center;
+    background-size: 100%;
+    height: 100vh;
+    width: 1912px;
+    max-width: 3000px;
+    color: white;
+    overflow: hidden;
+}
+
+.home-section h1 {
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+
+.home-section p {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #00bcd4;
+    color: white;
+    font-size: 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.home-btn:hover {
+    background-color: #008ba3;
+}
+
+
+.team-section h1 {
+    font-size: 100px;
+    color: white;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    text-align: center;
+}
+
+.management-team h1 {
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    margin: 100px 0;
+    padding: 20px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: #d36bee;
+}
+
+.social-icons {
+    display: flex;
+    gap: 5px; 
+    justify-content: center;
+    align-items: center;
+    max-width: 200px; 
+}
+
+.social-icons img {
+    width: 30px;  
+    height: 30px; 
+    display: inline-block; 
+    vertical-align: middle; 
+}
+
+.about-section-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #1e3e3e;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-text h2 {
+    font-size: 90px;
+    font-style: italic;
+    color: #00ffff;
+}
+
+.about-text p {
+    font-size: 25px;
+    line-height: 1.6;
+    color: white;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 20px;
+}
+
+.container-html-section,
+.container-css-section,
+.container-js-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;     
+    max-width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #1e3e3e;
+}
+
+.html-content, .css-content, .js-content {
+    width: 60%;
+}
+
+.html-content h1, .css-content h1, .js-content h1 {
+    font-size: 90px;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+}
+
+.html-content p, .css-content p, .js-content p {
+    font-size: 30px;
+    line-height: 1.4;
+    text-align: justify;
+    color: white;
+}
+
+.html-content img, .css-content img {
+    width: 76%;
+    border-radius: 10px;
+}
+
+.js-content img {
+    width: 55%;
+    margin-left: 100px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    margin: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+#menu-btn {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 100px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+#menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+#menu.show {
+    display: flex;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Responsive Fix */
+@media (max-width: 1440px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        margin: 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+    }
+
+    #menu-btn {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    
+    #menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 15px;
+        border-radius: 8px;
+        z-index: 1000; 
+    }
+    
+    
+    #menu.show {
+        display: flex;
+    }
+    
+    #menu a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 18px;
+    }
+    
+    #menu a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+    
+
+    header {
+        height: auto;
+        padding: 20px;
+        margin-top: -190px;
+        background-size: cover;
+    }
+
+    header h1 {
+        font-size: 80px;
+        margin-top: 210px;
+    }
+
+    header h3 {
+        font-size: 35px;
+    }
+
+    .home-section {
+        height: 70vh;
+        width: 4000px;
+        max-width: 1440px;
+        overflow: hidden;
+    }
+
+    .home-section h1 {
+        font-size: 90px;
+    }
+
+    .home-section p {
+        font-size: 36px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .menu-btn2 {
+        display: none;
+    }
+
+    .container {
+        transform: scale(0.9);
+        margin-bottom: 250px;
+        margin: 100px;
+    }
+
+    .team-section h1, .management-team h1 {
+        font-size: 80px;
+    }
+
+    .about-text h2 {
+        font-size: 70px;
+    }
+
+    .about-text p, .html-content p, .css-content p, .js-content p {
+        font-size: 22px;
+    }
+
+    .html-content h1, .css-content h1, .js-content h1 {
+        font-size: 70px;
+    }
+
+    .icons i {
+        font-size: 30px;
+    }
+
+    .social a {
+        margin-top: -350px;
+        display: flex;
+        font-size: 45px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        margin-top: 10px;
+    }
+
+    .navbar {
+        display: none;
+    }
+    
+    .menu-btn2 {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        height: auto;
+        padding: 20px;
+        margin-top: -190px;
+        background-size: cover;  
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        margin: 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+    }
+
+    #menu-btn {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 15px;
+        border-radius: 8px;
+        z-index: 1000; 
+    }
+    
+    
+    #menu.show {
+        display: flex;
+    }
+    
+    #menu a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 18px;
+    }
+    
+    #menu a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+    header h1 {
+        font-size: 70px;
+    }
+
+    header h3 {
+        font-size: 30px;
+    }
+
+
+    .social a {
+        margin-bottom: -100px;
+        display: flex;
+        font-size: 45px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-section {
+        height: 50vh; 
+        width: 1024px;
+        max-width: 1200%;
+        overflow: hidden;
+    }
+
+    .home-section h1{
+        font-size: 53px;
+    }
+
+    .home-section p {
+        font-size: 30px;
+    }
+
+    .home-btn{
+        font-size: 35px;
+        margin-top: 20px;
+    }
+
+    .container {
+        transform: scale(1.2);
+    }
+
+    .team-section h1, .management-team h1 {
+        font-size: 70px;
+    }
+
+    .about-text h2 {
+        font-size: 60px;
+    }
+
+    .about-text p, .html-content p, .css-content p, .js-content p {
+        font-size: 20px;
+    }
+
+    .html-content h1, .css-content h1, .js-content h1 {
+        font-size: 60px;
+    }
+
+    .icons i {
+        font-size: 35px;
+    }
+
+    .social a {
+        font-size: 35px;
+    }
+
+    .icons {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 20px;
+        margin-top: -190px;
+        background-size: cover;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        margin: 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+    }
+
+    #menu-btn {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 15px;
+        border-radius: 8px;
+        z-index: 1000; 
+    }
+    
+    
+    #menu.show {
+        display: flex;
+    }
+    
+    #menu a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 18px;
+    }
+    
+    #menu a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+    
+    header h1 {
+        font-size: 40px;
+    }
+
+    header h3 {
+        font-size: 18px;
+    }
+
+    .container {
+        transform: scale(1);
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .social a {
+        margin-bottom: -250px;
+        display: flex;
+        font-size: 35px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .team-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .home-section {
+        height: 50vh; 
+        width: 767px;
+        background-size: 1000px;
+        max-width: 1200%;
+        overflow: hidden;
+    }
+
+    .home-section h1 {
+       font-size: 50px;
+    }
+    
+    .home-section p{
+       font-size: 20px;
+    }
+
+    .home-btn{
+        font-size: 23px;
+        margin-top: 20px;
+    }
+
+    .about-section-container, .container-html-section, .container-css-section, .container-js-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .about-text, .html-content, .css-content, .js-content {
+        width: 100%;
+        padding: 0;
+    }
+
+    .about-image img {
+        width: 50%;
+        max-width: 100%;
+        margin-left: 5px;
+    }
+
+    .html-content img, .css-content img {
+        width: 70%;
+        max-width: 100%;
+        margin-left: 100px;
+    }
+
+    .js-content img {
+        width: 50%;
+        max-width: 100%;
+        margin-left: 180px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .icons i{
+        font-size: 20px; 
+    }
+
+    .team-section h1, .management-team h1 {
+        font-size: 40px;
+    }
+
+    .about-text h2 {
+        font-size: 35px;
+    }
+
+    .about-text p, .html-content p, .css-content p, .js-content p {
+        font-size: 16px;
+    }
+
+    .html-content h1, .css-content h1, .js-content h1 {
+        font-size: 35px;
+    }
+}
+footer {
+    background-color: #193d35;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: #00ffff;
+}
+@media (max-width: 425px) {
+    header {
+        height: auto;
+        padding: 20px;
+        margin-top: -190px;
+        background-size: cover;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        margin: 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+    }
+
+    #menu-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 15px;
+        border-radius: 8px;
+        z-index: 1000; 
+    }
+    
+    
+    #menu.show {
+        display: flex;
+    }
+    
+    #menu a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 18px;
+    }
+    
+    #menu a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+    
+    header h1 {
+        font-size: 40px;
+    }
+
+    header h3 {
+        font-size: 18px;
+    }
+
+    .container {
+        transform: scale(1);
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .social a {
+        margin-bottom: -2px;
+        display: flex;
+        font-size: 45px;
+        align-items: center;
+        justify-content: center;
+    }
+    .team-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .home-section {
+        height: 27vh; 
+        width: 100%;
+        max-width: 1000px;
+        padding: 50px 20px;
+        overflow: hidden;
+    }
+
+    .home-section h1  {
+      font-size: 25px;
+    }
+    
+    .home-section p {
+      font-size: 15px;
+    }
+
+    .home-btn{
+        font-size: 15px;
+        margin-top: 25px;
+    }
+
+    .about-section-container, .container-html-section, .container-css-section, .container-js-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .about-text, .html-content, .css-content, .js-content {
+        width: 100%;
+        padding: 0;
+    }
+
+    .about-image img, .html-content img, .css-content img{
+        width: 100%;
+        max-width: 100%;
+        margin-left: 1px;
+    }
+
+    .js-content img {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 2px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .icons i{
+        font-size: 20px; 
+    }
+
+    .social a {
+        font-size: 25px;
+        margin-top: -90px;
+    }
+
+    .team-section h1, .management-team h1 {
+        font-size: 40px;
+    }
+
+    .about-text h2 {
+        font-size: 35px;
+    }
+
+    .about-text p, .html-content p, .css-content p, .js-content p {
+        font-size: 16px;
+    }
+
+    .html-content h1, .css-content h1, .js-content h1 {
+        font-size: 35px;
+    }
+}
+footer {
+    background-color: #193d35;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: #00ffff;
+}
+
+@media (max-width: 375px) {
+    header {
+        height: auto;
+        padding: 20px;
+        margin-top: -190px;
+        background-size: cover;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        margin: 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+    }
+
+    #menu-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 15px;
+        border-radius: 8px;
+        z-index: 1000; 
+    }
+    
+    
+    #menu.show {
+        display: flex;
+    }
+    
+    #menu a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 18px;
+    }
+    
+    #menu a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+    
+    header h1 {
+        font-size: 30px;
+    }
+
+    header h3 {
+        font-size: 16px;
+    }
+
+    .container {
+        transform: scale(1);
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .social a {
+        margin-bottom: -2px;
+        display: flex;
+        font-size: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+    .team-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .home-section {
+        height: 40vh; 
+        width: 100%;
+        background-size: 1000px;
+        max-width: 1000px;
+        padding: 50px 40px;
+        overflow: hidden;
+    }
+
+    .home-section h1, .home-section p {
+        max-width: 90%;  
+        overflow-wrap: break-word;
+    }
+
+    .home-btn{
+        font-size: 15px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+
+header {
+    height: 75vh;
+    padding: 20px;
+    margin-top: -190px;
+    background-size: cover;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+header h3 {
+    font-size: 16px;
+}
+
+.container {
+    transform: scale(0.8);
+    margin: 10px;
+    padding: 5px;
+}
+
+.social a {
+    margin-bottom: 10px;
+    display: flex;
+    font-size: 55px;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-container {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.home-section {
+    height: 40vh; 
+    width: 100%;
+    background-size: 800px;
+    max-width: 1000px;
+    padding: 50px 40px;
+    overflow: hidden;
+}
+
+.home-section h1, .home-section p {
+    max-width: 90%;  
+    overflow-wrap: break-word;
+}
+
+.home-btn{
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.about-section-container, .container-html-section, .container-css-section, .container-js-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.about-text, .html-content, .css-content, .js-content {
+    width: 100%;
+    padding: 0;
+}
+
+.about-image img, .html-content img, .css-content img {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 1px;
+}
+
+.js-content img {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 2px;
+}
+
+.navbar {
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar button {
+    width: 100%;
+    text-align: center;
+}
+
+.icons i {
+    font-size: 15px; 
+}
+
+.social a {
+    font-size: 20px;
+    margin-top: -70px;
+}
+
+.team-section h1, .management-team h1 {
+    font-size: 30px;
+}
+
+.about-text h2 {
+    font-size: 25px;
+}
+
+.about-text p, .html-content p, .css-content p, .js-content p {
+    font-size: 14px;
+}
+
+.html-content h1, .css-content h1, .js-content h1 {
+    font-size: 25px;
+
+}
+}
