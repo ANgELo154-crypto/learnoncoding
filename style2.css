@@ -10,13 +10,18 @@ body {
 header {
     background: linear-gradient(90deg, #0053a6, #0078d7);
     color: white;
-    padding: 40px 20px;
+    padding: 20px 20px; 
     text-align: center;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     border-bottom: 4px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease-in-out;
+    z-index: 1000; 
 }
+
 
 header h1 {
     margin: 0;
@@ -78,6 +83,44 @@ nav a:hover::after {
 html {
     scroll-behavior: smooth;
 }
+
+/* Introduction Section Styling */
+.introduction-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 50px 40px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle Hover Effect */
+.introduction-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading Styling */
+.introduction-section h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #004b9a;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph Styling */
+.introduction-section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #333;
+    max-width: 90%;
+    margin: 0 auto 20px;
+}
+
 
 .features-section {
     padding: 40px 20px;
