@@ -11,188 +11,145 @@
 <body>
 
     <!-- Header Section -->
-    <header>
-        <h1>LEARN ON CODING</h1>
-        <h3>LEARN NOW!</h3>
-        <div class="container">
-            <div class="icons">
-                <a href="#"><i class="fas fa-home"></i><p>Home</p></a>
-                <a href="#management"><i class="fas fa-desktop"></i><p>Management Team</p></a>
-                <a href="#about"><i class="fas fa-info-circle"></i><p>About</p></a>
-            </div>
-            <div class="icons">
-                <a href="#html"><i class="fab fa-html5"></i><p>HTML</p></a>
-                <a href="#css"><i class="fab fa-css3-alt"></i><p>CSS</p></a>
-                <a href="#javascript"><i class="fab fa-js"></i><p>JS</p></a>
-            </div>
-            <div class="icons">
-                <a href="#"><i class="fas fa-code"></i><p>CODEWORD</p></a>
-            </div>
-        </div>
-        <div class="social">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
+    <header id="Header">
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#lang">CODING LANGUAGES</a></li>
+            </ul>
+        </nav>
     </header>
+
     <!-- Hamburger Menu Section -->
     <button id="menu-btn" class="menu-btn2">☰</button>
     <nav id="menu" class="navbar">
         <a href="#home">Home</a>
         <a href="#management">Management Team</a>
         <a href="#about">About</a>
-        <a href="#html">HTML</a>
-        <a href="#css">CSS</a>
-        <a href="#javascript">JS</a>
+        <a href="#lang">Coding Languages</a>
     </nav>
     
-    <section>
-        <div class="home-section">
+    <section id="home" class="home-section">
             <h1>Welcome to Learn on Coding</h1>
-            <p>Your journey to mastering HTML, CSS, and JavaScript starts here!</p>
-            <a href="2nd.html" class="home-btn">Get Started</a>
-        </div>
+            <p>Your journey to mastering HTML, CSS, and JavaScript starts here! At Learn on Coding, we are dedicated to providing you with the tools, resources, 
+                and guidance you need to succeed in the world of web development. Whether you're just starting out or looking to enhance your skills, our platform is 
+                here to support you every step of the way. Dive into our tutorials, take on coding challenges, and bring your ideas to life. 
+                Let's build something amazing together!</p>
     </section>
+    
     <!-- Management Team Section -->
-    <section id="management" class="management-team">
-        <h1>MANAGEMENT TEAM</h1>
-        <div class="team-container">
-            <div class="team-member">
-                <img src="pics/Khalil.jfif" alt="Khalil Flores">
-                <h3>Khalil Flores</h3>
-                <p class="role">Website Designer</p>
-                <p class="role">Research Writer</p>
-                <div class="social-icons">
-                    <a href="#"><img src="pics/facebook icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="pics/instagram_icon-removebg-preview.png" alt="Instagram"></a>
-                    <a href="#"><img src="pics/x.png" alt="X (Twitter)"></a>
-                </div>
-            </div>
-    
-            <div class="team-member">
-                <img src="pics/ako.jpg.jfif" alt="Gelo Dimalanta">
-                <h3>Gelo Dimalanta</h3>
-                <p class="role">Website Developer</p>
-                <p class="role">Research Writer</p>
-                <div class="social-icons">
-                    <a href="#"><img src="pics/facebook icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="pics/instagram_icon-removebg-preview.png" alt="Instagram"></a>
-                    <a href="#"><img src="pics/x.png" alt="X (Twitter)"></a>
-                </div>
-            </div>
-    
-            <div class="team-member">
-                <img src="pics/Robbie.jpg" alt="Robbie Mae">
-                <h3>Robbie Mae</h3>
-                <p class="role">Research Writer</p>
-                <div class="social-icons">
-                    <a href="#"><img src="pics/facebook icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="pics/instagram_icon-removebg-preview.png" alt="Instagram"></a>
-                    <a href="#"><img src="pics/x.png" alt="X (Twitter)"></a>
-                </div>
-            </div>
-    
-            <div class="team-member">
-                <img src="pics/David.jpg" alt="David Salvacion">
-                <h3>David Salvacion</h3>
-                <p class="role">Documents</p>
-                <div class="social-icons">
-                    <a href="#"><img src="pics/facebook icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="pics/instagram_icon-removebg-preview.png" alt="Instagram"></a>
-                    <a href="#"><img src="pics/x.png" alt="X (Twitter)"></a>
-                </div>
-            </div>
-    
-            <div class="team-member">
-                <img src="pics/Mark.jfif" alt="Mark Sarmiento">
-                <h3>Mark Sarmiento</h3>
-                <p class="role">Documents</p>
-                <div class="social-icons">
-                    <a href="#"><img src="pics/facebook icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="pics/instagram_icon-removebg-preview.png" alt="Instagram"></a>
-                    <a href="#"><img src="pics/x.png" alt="X (Twitter)"></a>
-                </div>
-            </div>
+     <section id="management" class="management-team-section">
+    <h1>MANAGEMENT TEAM</h1>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="Robbie.jpg" alt="Robbie Mae Limbernardo">
+            <h3>Robbie Mae Limbernardo</h3>
+            <p>Research Writer</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/johndoe" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/johndoe" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/johndoe" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+            </ul>
         </div>
+        <div class="team-member">
+            <img src="Khalil.jfif" alt="Tim Khalil Flores">
+            <h3>Tim Khalil Flores</h3>
+            <p>Website Designer</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/janesmith" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/janesmith" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/janesmith" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div class="team-member">
+            <img src="ako.jpg.jfif" alt="Niño Angelo Dimalanta">
+            <h3>Niño Angelo Dimalanta</h3>
+            <p>Website Developer</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/emilyjohnson" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/emilyjohnson" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/emilyjohnson" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div class="team-member">
+            <img src="Mark.jfif" alt="Mark Joshua Sarmiento">
+            <h3>Mark Joshua Sarmiento</h3>
+            <p>Researcher</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/janesmith" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/janesmith" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/janesmith" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div class="team-member">
+            <img src="David.jpg" alt="John David Salvacion">
+            <h3>John David Salvacion</h3>
+            <p>Researcher</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/emilyjohnson" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/emilyjohnson" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/emilyjohnson" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+            </ul>
+        </div>
+    </div>
     </section>
-    
 
     <!-- About Section -->
     <section id="about" class="about-section-container">
         <div class="about-text">
             <h2>ABOUT!</h2>
-            <p>Learn on Coding is a platform designed to help aspiring developers and tech enthusiasts enhance their coding skills. Whether you're a beginner learning the basics of HTML, CSS, and JavaScript or an advanced programmer diving into complex development concepts, our goal is to provide accessible, high-quality educational content.</p>
-            <p>We believe in learning by doing, which is why our website offers hands-on tutorials, coding challenges, and real-world projects. Our mission is to empower individuals with the knowledge and tools needed to build their own websites, applications, and digital solutions.</p>
-            <p>Join us on this journey to master the art of coding and turn ideas into reality! 🚀</p>
+            <p>Learn on Coding is a platform designed to help aspiring developers and tech enthusiasts enhance their coding skills. 
+                Whether you're a beginner learning the basics of HTML, CSS, and JavaScript or an advanced programmer diving into complex development concepts,
+                 our goal is to provide accessible, high-quality educational content.
+               We believe in learning by doing, which is why our website offers hands-on tutorials, coding challenges, and real-world projects. 
+               Our mission is to empower individuals with the knowledge and tools needed to build their own websites, applications, and digital solutions.
+               Join us on this journey to master the art of coding and turn ideas into reality! 🚀</p>
         </div>
         <div class="about-image">
-            <img src="pics/awdawf.png" alt="Code Screen">
+            <img src="awdawf.png" alt="Code Screen">
         </div>
     </section>
-
-    <!-- HTML Section -->
-    <section id="html" class="container-html-section">
-        <div class="html-content">
-            <img src="pics/image 2nd.png" alt="HTML Illustration">
-        </div>
-        <div class="html-content">
-            <h1>HYPERTEXT MARKUP LANGUAGE (HTML)</h1>
-            <p>
-                HTML, a formatting system for displaying material retrieved over the Internet. 
-                Each retrieval unit is known as a Web page, and such pages frequently contain hypertext links that 
-                allow related pages to be retrieved. HTML is the markup language for encoding Web pages. It was designed 
-                by the British scientist Sir Tim Berners-Lee at the CERN nuclear physics laboratory in Switzerland during the early 1990s. 
-                HTML markup tags specify document elements such as headings, paragraphs, and tables.
-            </p>
-        </div>
-    </section>
-
-    <!-- CSS Section -->
-    <section id="css" class="container-css-section">
-        <div class="css-content">
-            <img src="pics/image 3.png" alt="CSS Illustration">
-        </div>
-        <div class="css-content">
-            <h1>CASCADING STYLE SHEETS (CSS)</h1>
-            <p>
-                CSS, or Cascading Style Sheets, is a language used to describe the presentation of a document written in HTML or XML. <br>
-                It controls the layout, colors, fonts, and overall visual appearance of web pages. Here are some key points about CSS: <br> 
-                1. Styling: CSS allows you to apply styles to HTML elements, such as setting the background color, font size, and margins. <br>
-                2. Separation of Concerns: By separating content (HTML) from presentation (CSS), it makes it easier to maintain and update web pages. <br>
-                3. Responsive Design: CSS enables the creation of responsive web designs that adapt to different screen sizes and devices. <br>
-                4. Selectors and Properties: CSS uses selectors to target HTML elements and properties to define the styles for those elements. <br>
-            </p>
-        </div>
-    </section>
-
-    <!-- JavaScript Section -->
-    <section id="javascript" class="container-js-section">
-        <div class="js-content">
-            <img src="pics/image 4.png" alt="JavaScript Illustration">
-        </div>
-        <div class="js-content">
-            <h1>JAVASCRIPT (JS)</h1>
-            <p>
-                JavaScript is a powerful, dynamic programming language used to create interactive and dynamic content on websites. It is one of the core technologies of web development, 
-                alongside HTML and CSS. With JavaScript, developers can add functionality such as animations, form validations, interactive elements, and real-time updates without needing 
-                to reload the page. It is widely used in both front-end and back-end development, thanks to frameworks and libraries like React, Angular, and Node.js.
-            </p>
-        </div>
-    </section>
+    
+     <section>
+        <section id="lang" class="skills-section">
+            <h1 class="skills-title">Coding Languages</h1>
+            <div class="skills-container">
+                <div class="skills-card">
+                    <a href="index2.html" target="_blank">
+                        <img src="html.png" alt="HTML Icon">
+                    </a>
+                    <h3>HTML</h3>
+                    <p>Master the building blocks of the web. Learn how to structure content effectively using HTML elements, tags, and attributes. <br> Click the Image to Learn more!</p>
+                </div>
+                <div class="skills-card">
+                    <a href="index3.html" target="_blank">
+                        <img src="css.png" alt="CSS Icon">
+                    </a>
+                    <h3>CSS</h3>
+                    <p>Bring your designs to life! Explore how to style and layout web pages with CSS properties, selectors, and responsive techniques. <br> Click the Image to Learn more!</p>
+                </div>
+                <div class="skills-card">
+                    <a href="index4.html" target="_blank">
+                        <img src="js.png" alt="JavaScript Icon">
+                    </a>
+                    <h3>JavaScript</h3>
+                    <p>Unlock the power of interactivity. Learn to create dynamic, engaging, and functional web experiences with JavaScript. <br> Click the Image to Learn more!</p>
+                </div>    </div>
+        </section>    </section>
     <!-- Footer Section -->
     <footer>
         <div class="footer-content">
             <h3>Learn on Coding</h3>
             <p>Empowering individuals with the knowledge and tools needed to build their own websites, applications, and digital solutions.</p>
-            <ul class="socials">
+            <ul class="social-icons">
                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
+                <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>    </ul>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2023 Learn on Coding. All rights reserved.</p>
+            <p>&copy; 2025 Learn on Coding. All rights reserved.</p>
         </div>
     </footer>
    <script src="script.js"></script>

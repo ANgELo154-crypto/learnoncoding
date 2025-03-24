@@ -1,0 +1,461 @@
+/* General styles for index2 */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #444;
+    line-height: 1.6;
+}
+header {
+    background: linear-gradient(90deg, #0053a6, #0078d7);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1.5px;
+}
+
+/* Navigation */
+nav {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 16px 24px;
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Underline effect on hover */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    width: 0%;
+    height: 3px;
+    background: #ff4757;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background: linear-gradient(90deg, #ff6b6b, #ff4757);
+    color: white;
+    transform: scale(1.05);
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Smooth Scroll Effect for Navigation */
+html {
+    scroll-behavior: smooth;
+}
+
+.features-section {
+    padding: 40px 20px;
+    background-color: #eef6fc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.features-section h2 {
+    color: #0053a6;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.features-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-section li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 25px;
+}
+
+.features-section li::before {
+    content: "✔";
+    color: #0078d7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.features-section li strong {
+    color: #0078d7;
+    font-weight: bold;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    color: #0053a6;
+    margin-bottom: 20px;
+}
+.html-tags-section {
+    padding: 70px 40px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin: 40px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.html-tags-section:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.html-tags-section h2 {
+    color: #003366;
+    margin-bottom: 35px;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.key-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.key-item {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #0078d7, #0053a6);
+    color: white;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.key-item:hover {
+    background: linear-gradient(135deg, #ff6b6b, #ff4757);
+    transform: scale(1.12);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: white;
+}
+
+/* Definition Box Styles */
+.tag-definition {
+    display: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    font-size: 1.1em;
+    color: #333;
+    text-align: center;
+    width: 85%;
+    max-width: 550px;
+    margin-top: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Show the definition when active */
+.tag-definition.active {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+footer {
+    background: linear-gradient(90deg, #0a2a24, #193d35);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Gradient Accent Line */
+footer::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff4757, #ff6b6b);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Footer Text */
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Social Icons Section */
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 12px;
+}
+
+/* Social Icons */
+footer .social-icons a {
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effects */
+footer .social-icons a:hover {
+    color: #ff4757;
+    transform: scale(1.2);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+footer .social-icons a i {
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons a:hover i {
+    transform: rotate(10deg);
+}
+
+/* Responsive Styles */
+/* --- 1440px Screens (Laptops) --- */
+@media (max-width: 1440px) {
+    header h1 {
+        font-size: 2.8em;
+    }
+    nav a {
+        font-size: 1.1em;
+    }
+    main {
+        padding: 30px 20px;
+    }
+}
+
+/* --- 1024px Screens (Smaller Laptops/Tablets in Landscape) --- */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2.6em;
+    }
+    
+    .features-section {
+        padding: 25px;
+    }
+
+    .key-list {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}
+
+/* --- 768px Screens (Tablets) --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.3em;
+    }
+
+    /* Responsive Navigation */
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    nav a {
+        padding: 12px;
+        font-size: 1em;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Features Section */
+    .features-section {
+        padding: 20px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px 0;
+    }
+}
+
+/* --- 425px Screens (Small Phones) --- */
+@media (max-width: 425px) {
+    header {
+        padding: 30px 15px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        font-size: 0.95em;
+    }
+
+    .features-section {
+        padding: 18px;
+    }
+
+    /* Adjust grid layout */
+    .key-list {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+}
+
+/* --- 375px Screens (Smaller Phones) --- */
+@media (max-width: 375px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav a {
+        font-size: 0.9em;
+    }
+
+    .features-section h2 {
+        font-size: 1.5em;
+    }
+
+    .key-list {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+/* --- 320px Screens (Smallest Phones) --- */
+@media (max-width: 320px) {
+    header {
+        padding: 25px 10px;
+    }
+
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    nav a {
+        font-size: 0.85em;
+        padding: 10px;
+    }
+
+    .features-section h2 {
+        font-size: 1.3em;
+    }
+
+    .key-list {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    footer p {
+        font-size: 11px;
+    }
+}
