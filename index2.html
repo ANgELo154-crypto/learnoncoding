@@ -4,8 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn on Coding - HTML</title>
-    <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+         /* General styles for index2 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #E8F5E9;
+    color: #333;
+    text-align: center;
+    padding-top: 100px;
+    transition: 0.3s;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: #222;
+    color: #f5f5f5;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #0053a6, #0078d7);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1.5px;
+}
+
+/* Navigation */
+nav {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 22px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    position: relative;
+}
+
+/* Accordion Styles */
+.accordion-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.accordion-item {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.accordion-header {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px;
+    background: #43A047;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+/* Code Editor */
+.code-editor {
+    width: 100%;
+    background: #282c34;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    resize: vertical;
+    outline: none;
+    margin-top: 10px;
+    min-height: 80px;
+}
+
+iframe {
+    width: 100%;
+    height: 150px;
+    border: none;
+}
+
+/* Introduction & Features */
+.introduction-section, .features-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 50px 40px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #0a2a24, #193d35);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.3em;
+    }
+    .features-section {
+        padding: 20px;
+    }
+    footer {
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        padding: 30px 15px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .features-section {
+        padding: 18px;
+    }
+    footer p {
+        font-size: 13px;
+    }
+}
+
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -37,64 +219,253 @@
             <li><strong>Compatibility:</strong> HTML is compatible with all modern web browsers, ensuring consistent rendering and functionality across different platforms.</li>
         </ul>
     </section>
-
-    <!-- HTML Tags Section -->
-    <section id="HTMLTags" class="html-tags-section">
-        <div class="content">
-            <h2>HTML PROPERTIES</h2>
-            <div class="key-list">
-            <div class="key-item" onclick="showDefinition('tag1')">!DOCTYPE HTML</div>
-            <div class="key-item" onclick="showDefinition('tag2')">HTML</div>
-            <div class="key-item" onclick="showDefinition('tag3')">HEAD</div>
-            <div class="key-item" onclick="showDefinition('tag4')">TITLE</div>
-            <div class="key-item" onclick="showDefinition('tag5')">BODY</div>
-            <div class="key-item" onclick="showDefinition('tag6')">H1</div>
-            <div class="key-item" onclick="showDefinition('tag7')">H2</div>
-            <div class="key-item" onclick="showDefinition('tag8')">H3</div>
-            <div class="key-item" onclick="showDefinition('tag9')">H4</div>
-            <div class="key-item" onclick="showDefinition('tag10')">H5</div>
-            <div class="key-item" onclick="showDefinition('tag11')">H6</div>
-            <div class="key-item" onclick="showDefinition('tag12')">P</div>
-            <div class="key-item" onclick="showDefinition('tag13')">A</div>
-            <div class="key-item" onclick="showDefinition('tag14')">IMG</div>
-            <div class="key-item" onclick="showDefinition('tag15')">DIV</div>
-            <div class="key-item" onclick="showDefinition('tag16')">SPAN</div>
-            <div class="key-item" onclick="showDefinition('tag17')">UL</div>
-            <div class="key-item" onclick="showDefinition('tag18')">OL</div>
-            <div class="key-item" onclick="showDefinition('tag19')">LI</div>
-            <div class="key-item" onclick="showDefinition('tag20')">TABLE</div>
-            <div class="key-item" onclick="showDefinition('tag21')">TR</div>
-            <div class="key-item" onclick="showDefinition('tag22')">TH</div>
-            <div class="key-item" onclick="showDefinition('tag23')">TD</div>
-            <div class="key-item" onclick="showDefinition('tag24')">FORM</div>
-            <div class="key-item" onclick="showDefinition('tag25')">INPUT</div>
-            <div class="key-item" onclick="showDefinition('tag26')">BUTTON</div>
-            <div class="key-item" onclick="showDefinition('tag27')">LABEL</div>
-            <div class="key-item" onclick="showDefinition('tag28')">TEXTAREA</div>
-            <div class="key-item" onclick="showDefinition('tag29')">SELECT</div>
-            <div class="key-item" onclick="showDefinition('tag30')">OPTION</div>
-            </div>
-            <div id="tag-definition" class="key-definition"></div>
-        </div>
-    </section>
     
-   
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-content">
-            <h3>Learn on Coding</h3>
-            <p>Empowering individuals with the knowledge and tools needed to build their own websites, applications, and digital solutions.</p>
-            <ul class="social-icons">
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>    
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Learn on Coding. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="script2.js"></script>
+    <!-- HTML Tags Section -->  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #eef2f3;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .accordion {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .accordion-item {
+            background: white;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .accordion-header {
+            background: linear-gradient(135deg, #3B5998, #192f6a);
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background: #253b80;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 20px;
+            text-align: left;
+            transition: all 0.3s ease-in-out;
+            background: #fafafa;
+            border-left: 4px solid #6a11cb;
+        }
+
+        .code-editor {
+            width: 100%;
+            height: 130px;
+            background: #1e1e1e;
+            color: #dcdcdc;
+            border: none;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            resize: vertical;
+            outline: none;
+            margin-top: 10px;
+            font-family: monospace;
+        }
+
+        .run-btn {
+            background: #ff7b00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: 0.3s;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .run-btn:hover {
+            background: #e66900;
+        }
+
+        .output-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 10px;
+            min-height: 60px;
+            border-radius: 5px;
+            background: #ffffff;
+            font-family: monospace;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .arrow {
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .open .arrow {
+            transform: rotate(180deg);
+        }  
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="accordion" id="accordionContainer"></div>
+
+    <script>
+        const topics = [
+            { title: "HTML Basics", definition: "Fundamental structure of an HTML document.", tags: ["!DOCTYPE", "HTML", "HEAD", "TITLE", "BODY"] },
+            { title: "HTML Tags and Elements", definition: "Different tags define various elements in an HTML document.", tags: ["H1", "H2", "H3", "H4", "H5", "H6"] },
+            { title: "HTML Paragraphs", definition: "The <p> tag is used to define paragraphs in an HTML document.", tags: ["P"] },
+            { title: "HTML Line Breaks", definition: "The <br> tag creates a line break in text.", tags: ["BR"] },
+            { title: "HTML Headings", definition: "Heading tags <h1> to <h6> define different levels of headings.", tags: ["H1", "H2", "H3", "H4", "H5", "H6"] },
+            { title: "HTML Text Formatting", definition: "Tags for styling text (bold, italic, underlined, etc.).", tags: ["B", "I", "U", "STRONG", "EM"] },
+            { title: "HTML Lists", definition: "HTML allows unordered and ordered lists using <ul> and <ol>.", tags: ["UL", "OL", "LI"] },
+            { title: "HTML Links", definition: "The <a> tag is used to create hyperlinks.", tags: ["A"] },
+            { title: "HTML Navigation", definition: "The <nav> tag defines a navigation section in a webpage.", tags: ["NAV"] },
+            { title: "HTML Comments", definition: "Comments are ignored by the browser but help in documentation.", tags: ["!-- Comment --"] },
+            { title: "HTML Semantics", definition: "Tags that add meaning to content, like <section>, <article>, and <aside>.", tags: ["SECTION", "ARTICLE", "ASIDE"] },
+            { title: "HTML Tables", definition: "Tables allow organizing data in rows and columns.", tags: ["TABLE", "TR", "TH", "TD"] },
+            { title: "HTML Horizontal Line", definition: "The <hr> tag is used to insert a horizontal rule.", tags: ["HR"] },
+            { title: "HTML Forms", definition: "Forms allow user input using input fields, buttons, and more.", tags: ["FORM", "INPUT", "TEXTAREA", "BUTTON"] },
+            { title: "HTML Div", definition: "The <div> and <span> elements are used for grouping and styling content.", tags: ["DIV", "SPAN"] },
+        ];
+
+        const tagExamples = {
+            "!DOCTYPE": "<!DOCTYPE html>",
+            "HTML": "<html>\n    <body>\n        Content here\n    </body>\n</html>",
+            "HEAD": "<head>\n    <title>Page Title</title>\n</head>",
+            "TITLE": "<title>My Webpage</title>",
+            "BODY": "<body>\n    Content goes here\n</body>",
+            "H1": "<h1>Main Heading</h1>",
+            "H2": "<h2>Subheading</h2>",
+            "H3": "<h3>Sub-subheading</h3>",
+            "H4": "<h4>Sub-sub-subheading</h4>",
+            "H5": "<h5>Sub-sub-sub-subheading</h5>",
+            "H6": "<h6>Smallest Heading</h6>",
+            "!-- Comment --": "<!-- This is a comment -->",
+            "P": "<p>This is a paragraph.</p>",
+            "A": "<a href='https://example.com'>Visit Example</a>",
+            "UL": "<ul>\n    <li>Item 1</li>\n</ul>",
+            "OL": "<ol>\n    <li>Item 1</li>\n</ol>",
+            "LI": "<li>List Item</li>",
+            "TR": "<tr>\n    <td>Row 1</td>\n  <td>Row 2</td> \n</tr>",
+            "TH": "<th>Header</th>",
+            "TD": "<td>Data</td>",
+            "B": "<b>Bold Text</b>",
+            "I": "<i>Italic Text</i>",
+            "U": "<u>Underlined Text</u>",
+            "STRONG": "<strong>Strong Text</strong>",
+            "EM": "<em>Emphasized Text</em>",
+            "BR": "<br>",
+            "DIV": "<div>\n    <p>Content inside a div</p>\n</div>",
+            "SPAN": "<span>Inline text</span>",
+            "SECTION": "<section>\n    <h2>Section Title</h2>\n</section>",
+            "ARTICLE": "<article>\n    <h2>Article Title</h2>\n</article>",
+            "ASIDE": "<aside>\n    <p>Sidebar content</p>\n</aside>",
+            "NAV": "<nav>\n    <ul>\n        <li><a href='#'>Home</a></li>\n    </ul>\n</nav>",
+            "FORM": "<form>\n    <input type='text' placeholder='Enter text'>\n</form>",
+            "TEXTAREA": "<textarea rows='4' cols='50'>Enter text here...</textarea>",
+            "TABLE": "<table border='1'>\n    <tr><th>Header</th></tr>\n    <tr><td>Data</td></tr>\n</table>",
+            "FORM": "<form>\n    <input type='text' placeholder='Enter text'>\n    <button>Submit</button>\n</form>",
+            "INPUT": "<input type='text' placeholder='Enter text'>",
+            "BUTTON": "<button>Click Me</button>",
+            "HR": "<hr>",
+        };
+
+        const accordionContainer = document.getElementById("accordionContainer");
+
+        topics.forEach((topic, index) => {
+            const item = document.createElement("div");
+            item.classList.add("accordion-item");
+
+            item.innerHTML = `
+                <div class="accordion-header" onclick="toggleAccordion(${index})">
+                    <span>Topic ${index + 1} - ${topic.title}</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="accordion-content" id="content${index}">
+                    <p><strong>Definition:</strong> ${topic.definition}</p>
+                    ${topic.tags.map(tag => `
+                        <div>
+                            <b>${tag}</b>: 
+                            <textarea class="code-editor" id="editor${tag}">${tagExamples[tag] || ""}</textarea>
+                            <button class="run-btn" onclick="runCode('${tag}')">Run</button>
+                            <div class="output-box" id="output${tag}"></div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            accordionContainer.appendChild(item);
+        });
+
+        function toggleAccordion(index) {
+            const content = document.getElementById(`content${index}`);
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+
+        function runCode(tag) {
+            const editor = document.getElementById(`editor${tag}`);
+            const outputBox = document.getElementById(`output${tag}`);
+            outputBox.innerHTML = editor.value;
+        }
+
+    </script>
+
+ <!-- Footer Section -->
+ <footer>
+    <div class="footer-content">
+        <h3>Learn on Coding</h3>
+        <p>Empowering individuals with the knowledge and tools needed to build their own websites, applications, and digital solutions.</p>
+        <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>    
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Learn on Coding. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>

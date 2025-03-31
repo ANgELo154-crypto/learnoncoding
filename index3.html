@@ -4,20 +4,424 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn on Coding - CSS</title>
-    <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        header {
+    background: linear-gradient(90deg, #0053a6, #0078d7);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1.5px;
+}
+
+/* Navigation */
+nav {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 22px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    position: relative;
+}
+
+/* Underline effect */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 0%;
+    height: 3px;
+    background: #ff4757;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Hover effects */
+nav a:hover {
+    background: linear-gradient(90deg, #ff6b6b, #ff4757);
+    color: white;
+    transform: scale(1.08);
+    border-radius: 8px;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .introduction, .css-topics{
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      
+.introduction {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 50px 40px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.introduction:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.introduction h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #004b9a;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.introduction p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #333;
+    max-width: 90%;
+    margin: 0 auto 20px;
+}
+
+
+.features-section {
+    padding: 40px 20px;
+    background-color: #eef6fc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.features-section h2 {
+    color: #0053a6;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.features-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-section li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 25px;
+}
+
+.features-section li::before {
+    content: "✔";
+    color: #0078d7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.features-section li strong {
+    color: #0078d7;
+    font-weight: bold;
+}
+        .accordion-item {
+            background: white;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+        .accordion-header {
+            background: linear-gradient(135deg, #3B5998, #192f6a);
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion-content {
+            display: none;
+            padding: 20px;
+            background: #fafafa;
+        }
+        .code-editor {
+            width: 100%;
+            height: 100px;
+            background: #1e1e1e;
+            color: #dcdcdc;
+            border: none;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            resize: vertical;
+            outline: none;
+            font-family: monospace;
+        }
+        .run-btn {
+            background: #ff7b00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .output-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 10px;
+            min-height: 60px;
+            border-radius: 5px;
+            background: #ffffff;
+            font-family: monospace;
+        }
+        footer {
+            background: linear-gradient(90deg, #0a2a24, #193d35);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+            font-size: 14px;
+            transition: all 0.3s ease-in-out;
+        }
+        footer:hover {
+            background: linear-gradient(90deg, #0a2a24, #1a4d4e);
+        }
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .footer-content h3 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .footer-content p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .social-icons li {
+            margin: 0 10px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        .social-icons a:hover {
+            color: #ff7b00;
+        }
+        .footer-bottom {
+            background: #0a2a24;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        .footer-bottom p {
+            margin: 0;
+        }
+        @media (max-width: 600px) {
+            .accordion-header {
+                font-size: 16px;
+            }
+            .code-editor {
+                height: 80px;
+            }
+            .run-btn {
+                font-size: 12px;
+            }
+        }
+        @media (max-width: 400px) {
+            header {
+                font-size: 20px;
+            }
+            .accordion-header {
+                font-size: 14px;
+            }
+            .code-editor {
+                height: 60px;
+            }
+            .run-btn {
+                font-size: 10px;
+            }
+        }
+        @media (max-width: 768px) {
+            .accordion-header {
+                font-size: 18px;
+            }
+            .code-editor {
+                height: 90px;
+            }
+            .run-btn {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 1024px) {
+            .accordion-header {
+                font-size: 20px;
+            }
+            .code-editor {
+                height: 100px;
+            }
+            .run-btn {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 1200px) {
+            .accordion-header {
+                font-size: 22px;
+            }
+            .code-editor {
+                height: 110px;
+            }
+            .run-btn {
+                font-size: 18px;
+            }
+        }
+        @media (max-width: 1400px) {
+            .accordion-header {
+                font-size: 24px;
+            }
+            .code-editor {
+                height: 120px;
+            }
+            .run-btn {
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 1600px) {
+            .accordion-header {
+                font-size: 26px;
+            }
+            .code-editor {
+                height: 130px;
+            }
+            .run-btn {
+                font-size: 22px;
+            }
+        }
+        @media (max-width: 1800px) {
+            .accordion-header {
+                font-size: 28px;
+            }
+            .code-editor {
+                height: 140px;
+            }
+            .run-btn {
+                font-size: 24px;
+            }
+        }
+        @media (max-width: 2000px) {
+            .accordion-header {
+                font-size: 30px;
+            }
+            .code-editor {
+                height: 150px;
+            }
+            .run-btn {
+                font-size: 26px;
+            }
+        }
+        @media (max-width: 2200px) {
+            .accordion-header {
+                font-size: 32px;
+            }
+            .code-editor {
+                height: 160px;
+            }
+            .run-btn {
+                font-size: 28px;
+            }
+        } 
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header id="Header">
+    <header>
         <nav>
             <ul>
                 <li><a href="index.html">Back to Home</a></li>
             </ul>
         </nav>
-    </header> 
-    <!-- Introduction Section -->
-    <section id="Introduction" class="introduction-section">
+    </header>
+    
+    <section id="Introduction" class="introduction">
         <h1>What is CSS?</h1>
         <p>CSS (Cascading Style Sheets) is a stylesheet language used to control the presentation and layout of web pages. It allows developers to separate the content of a web page, written in HTML, from its visual design, enabling greater flexibility and control over the appearance of a website.</p>
         <p>CSS provides a wide range of styling options, including the ability to define colors, fonts, spacing, borders, and positioning of elements. It also supports advanced features like animations, transitions, and responsive design, making it a powerful tool for creating visually appealing and interactive web experiences.</p>
@@ -42,54 +446,157 @@
             <li><strong>Performance Optimization:</strong> CSS reduces page load times by separating design from HTML and allowing efficient styling through external stylesheets.</li>
         </ul>
     </section>
-    
-    <!-- HTML Tags Section -->
-    <section id="HTMLTags" class="html-tags-section">
-        <div class="content">
-            <h2>CSS PROPERTIES</h2>
-            <div class="key-list">
-                <div class="key-item" onclick="showDefinition('prop1')">color</div>
-                <div class="key-item" onclick="showDefinition('prop2')">font-size</div>
-                <div class="key-item" onclick="showDefinition('prop3')">margin</div>
-                <div class="key-item" onclick="showDefinition('prop4')">padding</div>
-                <div class="key-item" onclick="showDefinition('prop5')">display</div>
-                <div class="key-item" onclick="showDefinition('prop6')">background-color</div>
-                <div class="key-item" onclick="showDefinition('prop7')">width</div>
-                <div class="key-item" onclick="showDefinition('prop8')">height</div>
-                <div class="key-item" onclick="showDefinition('prop9')">border</div>
-                <div class="key-item" onclick="showDefinition('prop10')">position</div>
-                <div class="key-item" onclick="showDefinition('prop11')">text-align</div>
-                <div class="key-item" onclick="showDefinition('prop12')">box-shadow</div>
-                <div class="key-item" onclick="showDefinition('prop13')">overflow</div>
-                <div class="key-item" onclick="showDefinition('prop14')">z-index</div>
-                <div class="key-item" onclick="showDefinition('prop15')">opacity</div>
-                <div class="key-item" onclick="showDefinition('prop16')">visibility</div>
-                <div class="key-item" onclick="showDefinition('prop17')">cursor</div>
-                <div class="key-item" onclick="showDefinition('prop18')">flexbox</div>
-                <div class="key-item" onclick="showDefinition('prop19')">grid</div>
-                <div class="key-item" onclick="showDefinition('prop20')">animation</div>
-            </div>
-            <div id="tag-definition" class="key-definition"></div>
-        </div>
+
+    <section class="css-topics">
+        <h2>CSS Topics</h2>
+        <div class="accordion" id="accordionContainer"></div>
     </section>
+
     
-   
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-content">
-            <h3>Learn on Coding</h3>
-            <p>Empowering individuals with the knowledge and tools needed to build their own websites, applications, and digital solutions.</p>
-            <ul class="social-icons">
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>    
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Learn on Coding. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="script2.js"></script>
+ <!-- Footer Section -->
+ <footer>
+    <div class="footer-content">
+        <h3>Learn on Coding</h3>
+        <p>Empowering individuals with the knowledge and tools needed to build their own websites, applications, and digital solutions.</p>
+        <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>    
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Learn on Coding. All rights reserved.</p>
+    </div>
+</footer>
+
+
+    <script>
+         document.addEventListener("DOMContentLoaded", function() {
+            const topics = [
+    { "title": "CSS Syntax", "definition": "The basic structure of CSS rules, including selectors and declarations.",
+      "html": "<h1>This is a heading</h1>",
+      "css": "h1 { color: blue; }" },
+    { "title": "CSS Comments", "definition": "Used to add notes or explanations in CSS code, ignored by the browser.",
+      "html": "<p>This is a paragraph.</p>",
+      "css": "/* This is a comment */\np { color: black; }" },
+    { "title": "CSS Units", "definition": "Different units for measuring length, including px, em, rem, %, vw, vh.",
+      "html": "<p>This text is 20px tall.</p>",
+      "css": "p { font-size: 20px; }" },
+    { "title": "CSS Fonts", "definition": "Specifies font properties like family, size, weight, and style.",
+      "html": "<p>This text uses a custom font.</p>",
+      "css": "p { font-family: Arial, sans-serif; }" },
+    { "title": "CSS Text Properties", "definition": "Controls text appearance, including alignment, decoration, and transformation.",
+    "html": "<p>This text is bold and centered.</p>",
+    "css": "p { font-weight: bold; text-align: center; }" },
+    { "title": "CSS Backgrounds", "definition": "Styles the background of elements, including color, image, and position.",
+    "html": "<div class='background'>This is a background example.</div>",
+    "css": ".background { background-color: lightblue; }" },
+    { "title": "CSS Borders", "definition": "Defines borders around elements, including width, style, and color.",
+    "html": "<div class='border'>This is a bordered box.</div>",
+    "css": ".border { border: 2px solid black; }" },
+    { "title": "CSS Padding and Margin", "definition": "Controls spacing inside (padding) and outside (margin) elements.",
+    "html": "<div class='spacing'>This box has padding and margin.</div>",
+    "css": ".spacing { padding: 20px; margin: 10px; }" },
+    { "title": "CSS Display Property", "definition": "Controls how elements are displayed, including block, inline, and flex.",
+    "html": "<div class='display'>This is a block element.</div>",
+    "css": ".display { display: block; }" },
+    { "title": "Inline CSS", "definition": "Styles applied directly within an HTML element using the 'style' attribute.",
+      "html": "<p style='color: red;'>This is an inline styled paragraph.</p>",
+      "css": "" },
+    { "title": "Internal CSS", "definition": "CSS written inside a <style> tag within the HTML file.",
+      "html": "<h1>This is an internally styled heading</h1>",
+      "css": "h1 { color: blue; }" },
+    { "title": "External CSS", "definition": "CSS stored in an external file and linked to the HTML document.",
+      "html": "<h1>This is a heading styled with external CSS</h1>",
+      "css": "/* In styles.css */\nh1 { color: green; }" },
+    { "title": "CSS Box Model", "definition": "Defines how elements are displayed, including margins, borders, padding, and content.",
+      "html": "<div class='box-model'>This is a box model example.</div>",
+      "css": ".box-model { width: 200px; height: 100px; padding: 20px; border: 5px solid black; margin: 10px; background-color: lightgray; }" },
+    { "title": "CSS Selectors", "definition": "Patterns used to select elements for styling.",
+      "html": "<p class='example'>This is a paragraph.</p>",
+      "css": ".example { color: purple; }" },
+    { "title": "CSS Flexbox", "definition": "A layout model that allows responsive design using flexible containers.",
+      "html": "<div class='flex-container'><div>Item 1</div><div>Item 2</div></div>",
+      "css": ".flex-container { display: flex; }" },
+    { "title": "CSS Grid", "definition": "A two-dimensional layout system for creating complex web layouts.",
+      "html": "<div class='grid-container'><div>Item 1</div><div>Item 2</div></div>",
+      "css": ".grid-container { display: grid; grid-template-columns: auto auto; }" },
+    { "title": "CSS Media Queries", "definition": "Used to apply styles based on device characteristics like screen size.",
+      "html": "<p>This text changes color based on screen size.</p>",
+      "css": "@media (max-width: 600px) { p { color: orange; } }" },
+    { "title": "CSS Variables", "definition": "Custom properties that store values for reuse throughout the stylesheet.",
+      "html": "<p>This text uses a CSS variable.</p>",
+      "css": ":root { --main-color: teal; }\np { color: var(--main-color); }" },
+    { "title": "CSS Positioning", "definition": "Controls how elements are positioned on the page.",
+      "html": "<div class='positioned'>This is positioned.</div>",
+      "css": ".positioned { position: absolute; top: 50px; left: 100px; }" },
+    { "title": "CSS Transforms", "definition": "Allows rotating, scaling, skewing, and translating elements.",
+      "html": "<div class='transform'>Transformed Element</div>",
+      "css": ".transform { transform: rotate(45deg); }" },
+    { "title": "CSS Transitions", "definition": "Smoothly animates changes in CSS properties.",
+      "html": "<button class='transition'>Hover over me</button>",
+      "css": ".transition { transition: background-color 0.5s ease; }" },
+    { "title": "CSS Animations", "definition": "Creates animations using keyframes.",
+      "html": "<p class='animated-text'>This text fades in.</p>",
+      "css": "@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } } .animated-text { animation: fadeIn 2s ease-in-out; }" },
+    { "title": "CSS Shadows", "definition": "Adds shadow effects to elements.",
+      "html": "<div class='shadow-box'>Shadow Effect</div>",
+      "css": ".shadow-box { box-shadow: 5px 5px 10px gray; }" },
+    { "title": "CSS Z-Index", "definition": "Controls the stack order of elements.",
+      "html": "<div class='zindex'>This element is on top</div>",
+      "css": ".zindex { position: absolute; z-index: 10; }" },
+    { "title": "CSS Opacity", "definition": "Controls the transparency of elements.",
+      "html": "<p class='transparent'>Transparent Text</p>",
+      "css": ".transparent { opacity: 0.5; }" },
+    { "title": "CSS Object Fit", "definition": "Controls how images or videos fit into their container.",
+      "html": "<img class='fit' src='image.jpg' alt='Example'>",
+      "css": ".fit { object-fit: cover; }" },
+    { "title": "CSS Viewport Units", "definition": "Defines sizing based on the viewport width and height.",
+      "html": "<div class='viewport-box'>Viewport Box</div>",
+      "css": ".viewport-box { width: 50vw; height: 30vh; background-color: lightblue; }" },
+    { "title": "CSS Clamp Function", "definition": "Sets a range for property values based on min, preferred, and max sizes.",
+      "html": "<p class='clamp-text'>Clamped Text</p>",
+      "css": ".clamp-text { font-size: clamp(1rem, 2vw, 3rem); }" }
+];
+
+
+            const accordionContainer = document.getElementById("accordionContainer");
+            
+            topics.forEach((topic, index) => {
+                const item = document.createElement("div");
+                item.classList.add("accordion-item");
+
+                item.innerHTML = `
+                    <div class="accordion-header" onclick="toggleAccordion(${index})">
+                        <span>${topic.title}</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content" id="content${index}">
+                        <p><strong>Definition:</strong> ${topic.definition}</p>
+                        <p><strong>HTML:</strong></p>
+                        <textarea class="code-editor" id="htmlEditor${index}">${topic.html}</textarea>
+                        <p><strong>CSS:</strong></p>
+                        <textarea class="code-editor" id="cssEditor${index}">${topic.css}</textarea>
+                        <button class="run-btn" onclick="runCode(${index})">Run</button>
+                        <div class="output-box" id="output${index}"></div>
+                    </div>
+                `;
+                accordionContainer.appendChild(item);
+            });
+        });
+
+        function toggleAccordion(index) {
+            const content = document.getElementById(`content${index}`);
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+
+        function runCode(index) {
+            const htmlCode = document.getElementById(`htmlEditor${index}`).value;
+            const cssCode = document.getElementById(`cssEditor${index}`).value;
+            const output = document.getElementById(`output${index}`);
+            output.innerHTML = `<style>${cssCode}</style>${htmlCode}`;
+        }
+    </script>
 </body>
 </html>

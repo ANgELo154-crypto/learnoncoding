@@ -4,20 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn on Coding - JavaScript</title>
-    <link rel="stylesheet" href="style2.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        .accordion {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .accordion-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .accordion-title {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            background: #fff;
+        }
+        .introduction {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 50px 40px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.introduction:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.introduction h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #004b9a;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.introduction p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #333;
+    max-width: 90%;
+    margin: 0 auto 20px;
+}
+
+
+.features-section {
+    padding: 40px 20px;
+    background-color: #eef6fc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.features-section h2 {
+    color: #0053a6;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.features-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-section li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 25px;
+}
+
+.features-section li::before {
+    content: "✔";
+    color: #0078d7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.features-section li strong {
+    color: #0078d7;
+    font-weight: bold;
+}
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            font-family: monospace;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            resize: vertical;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        iframe {
+            width: 100%;
+            height: 120px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            background: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header id="Header">
-        <nav>
-            <ul>
-                <li><a href="index.html">Back to Home</a></li>
-            </ul>
-        </nav>
-    </header> 
-    <!-- Introduction Section -->
-    <section id="Introduction" class="introduction-section">
+       <!-- Introduction Section -->
+       <section id="Introduction" class="introduction">
         <h1>What is JavaScript?</h1>
         <p>JavaScript is a versatile and powerful programming language that is primarily used to create dynamic and interactive content on websites. It is one of the core technologies of the web, alongside HTML and CSS, and plays a crucial role in enhancing user experiences by enabling features such as animations, form validations, interactive maps, and real-time updates.</p>
         <p>Unlike HTML, which structures the content of a web page, and CSS, which styles it, JavaScript adds behavior and functionality. It allows developers to manipulate the Document Object Model (DOM), enabling them to dynamically update content, respond to user actions, and create engaging interfaces. JavaScript can be used to build everything from simple scripts to complex web applications.</p>
@@ -44,64 +189,288 @@
             <li><strong>Data Storage:</strong> JavaScript provides localStorage, sessionStorage, and IndexedDB for storing data in the browser.</li>
         </ul>
     </section>
-
-    <!-- HTML Tags Section -->
-    <section id="HTMLTags" class="html-tags-section">
-        <div class="content">
-            <h2>JavaScript Concepts</h2>
-            <div class="key-list">
-                <div class="key-item" onclick="showDefinition('js1')">var</div>
-                <div class="key-item" onclick="showDefinition('js2')">let</div>
-                <div class="key-item" onclick="showDefinition('js3')">const</div>
-                <div class="key-item" onclick="showDefinition('js4')">function</div>
-                <div class="key-item" onclick="showDefinition('js5')">if statement</div>
-                <div class="key-item" onclick="showDefinition('js6')">else statement</div>
-                <div class="key-item" onclick="showDefinition('js7')">else if statement</div>
-                <div class="key-item" onclick="showDefinition('js8')">for loop</div>
-                <div class="key-item" onclick="showDefinition('js9')">while loop</div>
-                <div class="key-item" onclick="showDefinition('js10')">do...while loop</div>
-                <div class="key-item" onclick="showDefinition('js11')">console.log()</div>
-                <div class="key-item" onclick="showDefinition('js12')">Arrow Function</div>
-                <div class="key-item" onclick="showDefinition('js13')">Array</div>
-                <div class="key-item" onclick="showDefinition('js14')">Object</div>
-                <div class="key-item" onclick="showDefinition('js15')">JSON</div>
-                <div class="key-item" onclick="showDefinition('js16')">DOM</div>
-                <div class="key-item" onclick="showDefinition('js17')">Event Listener</div>
-                <div class="key-item" onclick="showDefinition('js18')">setTimeout()</div>
-                <div class="key-item" onclick="showDefinition('js19')">setInterval()</div>
-                <div class="key-item" onclick="showDefinition('js20')">try...catch</div>
-                <div class="key-item" onclick="showDefinition('js21')">Promise</div>
-                <div class="key-item" onclick="showDefinition('js22')">async/await</div>
-                <div class="key-item" onclick="showDefinition('js23')">localStorage</div>
-                <div class="key-item" onclick="showDefinition('js24')">sessionStorage</div>
-                <div class="key-item" onclick="showDefinition('js25')">fetch API</div>
-                <div class="key-item" onclick="showDefinition('js26')">Map()</div>
-                <div class="key-item" onclick="showDefinition('js27')">Set()</div>
-                <div class="key-item" onclick="showDefinition('js28')">parseInt()</div>
-                <div class="key-item" onclick="showDefinition('js29')">parseFloat()</div>
-                <div class="key-item" onclick="showDefinition('js30')">toFixed()</div>
-            </div>            
-            <div id="tag-definition" class="key-definition"></div>
-        </div>
-    </section>
+    <div class="container">
+        <!-- Back to Home Button -->
+        <button onclick="window.location.href='index.html'" style="position: fixed; top: 20px; left: 20px; padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Back to Home
+        </button>    
+        <div class="accordion">
+            <!-- JavaScript Syntax -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">JavaScript Syntax</div>
+                <div class="accordion-content">
+                    <textarea id="jsSyntax">console.log('Hello, JavaScript!');</textarea>
+                    <button onclick="runCode('jsSyntax', 'jsSyntaxOutput')">Run Code</button>
+                    <iframe id="jsSyntaxOutput"></iframe>
+                </div>
+            </div>
     
-   
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-content">
-            <h3>Learn on Coding</h3>
-            <p>Empowering individuals with the knowledge and tools needed to build their own websites, applications, and digital solutions.</p>
-            <ul class="social-icons">
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>    
-            </ul>
+            <!-- Functions & Parameters -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">Functions & Parameters</div>
+                <div class="accordion-content">
+                    <textarea id="jsFunctions">function add(a, b) {
+                        return a + b;
+                    }
+                    console.log(add(5, 10));</textarea>
+                    <button onclick="runCode('jsFunctions', 'jsFunctionsOutput')">Run Code</button>
+                    <iframe id="jsFunctionsOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- Variables & Data Types -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">Variables & Data Types</div>
+                <div class="accordion-content">
+                    <textarea id="jsVariables">let name = "Alice";
+                    let age = 25;
+                    console.log(`Name: ${name}, Age: ${age}`);</textarea>
+                    <button onclick="runCode('jsVariables', 'jsVariablesOutput')">Run Code</button>
+                    <iframe id="jsVariablesOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- Loops -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">Loops</div>
+                <div class="accordion-content">
+                    <textarea id="jsLoops">for (let i = 1; i <= 5; i++) {
+                        console.log(`Count: ${i}`);
+                    }</textarea>
+                    <button onclick="runCode('jsLoops', 'jsLoopsOutput')">Run Code</button>
+                    <iframe id="jsLoopsOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- Switch Statement -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">Switch Statement</div>
+                <div class="accordion-content">
+                    <textarea id="jsSwitch">let day = 2;
+                    switch(day) {
+                        case 1:
+                            console.log("Monday");
+                            break;
+                        case 2:
+                            console.log("Tuesday");
+                            break;
+                        case 3:
+                            console.log("Wednesday");
+                            break;
+                        default:
+                            console.log("Invalid day");
+                    }</textarea>
+                    <button onclick="runCode('jsSwitch', 'jsSwitchOutput')">Run Code</button>
+                    <iframe id="jsSwitchOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- For...In Loop -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">For...In Loop</div>
+                <div class="accordion-content">
+                    <textarea id="jsForIn">let person = {name: "John", age: 30, city: "New York"};
+                    for (let key in person) {
+                        console.log(key + ": " + person[key]);
+                    }</textarea>
+                    <button onclick="runCode('jsForIn', 'jsForInOutput')">Run Code</button>
+                    <iframe id="jsForInOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- For...Of Loop -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">For...Of Loop</div>
+                <div class="accordion-content">
+                    <textarea id="jsForOf">let colors = ["Red", "Green", "Blue"];
+                    for (let color of colors) {
+                        console.log(color);
+                    }</textarea>
+                    <button onclick="runCode('jsForOf', 'jsForOfOutput')">Run Code</button>
+                    <iframe id="jsForOfOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- Array Methods - map() -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">Array Methods - map()</div>
+                <div class="accordion-content">
+                    <textarea id="jsMap">let numbers = [1, 2, 3, 4];
+                    let squared = numbers.map(x => x * x);
+                    console.log(squared);</textarea>
+                    <button onclick="runCode('jsMap', 'jsMapOutput')">Run Code</button>
+                    <iframe id="jsMapOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- Array Methods - filter() -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">Array Methods - filter()</div>
+                <div class="accordion-content">
+                    <textarea id="jsFilter">let numbers = [1, 2, 3, 4, 5];
+                    let evenNumbers = numbers.filter(x => x % 2 === 0);
+                    console.log(evenNumbers);</textarea>
+                    <button onclick="runCode('jsFilter', 'jsFilterOutput')">Run Code</button>
+                    <iframe id="jsFilterOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- Array Methods - reduce() -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">Array Methods - reduce()</div>
+                <div class="accordion-content">
+                    <textarea id="jsReduce">let numbers = [1, 2, 3, 4];
+                    let sum = numbers.reduce((acc, current) => acc + current, 0);
+                    console.log(sum);</textarea>
+                    <button onclick="runCode('jsReduce', 'jsReduceOutput')">Run Code</button>
+                    <iframe id="jsReduceOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- Date Methods -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">Date Methods</div>
+                <div class="accordion-content">
+                    <textarea id="jsDateMethods">let date = new Date();
+                    console.log(date);  // Current date and time
+                    console.log(date.getFullYear());  // Current year
+                    console.log(date.getMonth());  // Current month (0-11)</textarea>
+                    <button onclick="runCode('jsDateMethods', 'jsDateMethodsOutput')">Run Code</button>
+                    <iframe id="jsDateMethodsOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- String Methods - Substring and Slice -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">String Methods - Substring and Slice</div>
+                <div class="accordion-content">
+                    <textarea id="jsStringMethods">let text = "Hello, World!";
+                    console.log(text.substring(0, 5));  // Output: "Hello"
+                    console.log(text.slice(7, 12));  // Output: "World"</textarea>
+                    <button onclick="runCode('jsStringMethods', 'jsStringMethodsOutput')">Run Code</button>
+                    <iframe id="jsStringMethodsOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- Type Conversion -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">Type Conversion</div>
+                <div class="accordion-content">
+                    <textarea id="jsTypeConversion">let str = "123";
+                    let num = Number(str);
+                    console.log(num);  // Output: 123 (number)</textarea>
+                    <button onclick="runCode('jsTypeConversion', 'jsTypeConversionOutput')">Run Code</button>
+                    <iframe id="jsTypeConversionOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- NaN (Not-a-Number) -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">NaN (Not-a-Number)</div>
+                <div class="accordion-content">
+                    <textarea id="jsNaN">let invalidNumber = "Hello" / 2;
+                    console.log(invalidNumber);  // Output: NaN</textarea>
+                    <button onclick="runCode('jsNaN', 'jsNaNOutput')">Run Code</button>
+                    <iframe id="jsNaNOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- Ternary Operator -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">Ternary Operator</div>
+                <div class="accordion-content">
+                    <textarea id="jsTernary">let age = 20;
+                    let message = age >= 18 ? "Adult" : "Minor";
+                    console.log(message);  // Output: "Adult"</textarea>
+                    <button onclick="runCode('jsTernary', 'jsTernaryOutput')">Run Code</button>
+                    <iframe id="jsTernaryOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- Error Handling (try...catch) -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">Error Handling (try...catch)</div>
+                <div class="accordion-content">
+                    <textarea id="jsErrorHandling">try {
+                        let result = 10 / 0;
+                        if (result === Infinity) throw "Cannot divide by zero";
+                    } catch (error) {
+                        console.log("Error: " + error);
+                    }</textarea>
+                    <button onclick="runCode('jsErrorHandling', 'jsErrorHandlingOutput')">Run Code</button>
+                    <iframe id="jsErrorHandlingOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- Function Expressions -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">Function Expressions</div>
+                <div class="accordion-content">
+                    <textarea id="jsFunctionExpression">const greet = function(name) {
+                        return `Hello, ${name}!`;
+                    };
+                    console.log(greet("John"));  // Output: "Hello, John!"</textarea>
+                    <button onclick="runCode('jsFunctionExpression', 'jsFunctionExpressionOutput')">Run Code</button>
+                    <iframe id="jsFunctionExpressionOutput"></iframe>
+                </div>
+            </div>
+    
+            <!-- Arrow Functions -->
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion(this)">Arrow Functions</div>
+                <div class="accordion-content">
+                    <textarea id="jsArrowFunction">const add = (a, b) => a + b;
+                    console.log(add(3, 4));  // Output: 7</textarea>
+                    <button onclick="runCode('jsArrowFunction', 'jsArrowFunctionOutput')">Run Code</button>
+                    <iframe id="jsArrowFunctionOutput"></iframe>
+                </div>
+            </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Learn on Coding. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="script2.js"></script>
+    </div>
+                
+      
+    <script>
+        function runCode(textareaId, outputId) {
+            const code = document.getElementById(textareaId).value;
+            const iframe = document.getElementById(outputId);
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            
+            // Clear iframe content first
+            iframeDoc.open();
+            iframeDoc.write('<html><body></body></html>');  // Clear old content
+            iframeDoc.close();
+            
+            // Now write new code inside iframe
+            iframeDoc.open();
+            iframeDoc.write(`
+                <html>
+                <body>
+                    <script>
+                        (function() {
+                            let output = "";
+                            const originalConsoleLog = console.log;
+                            console.log = function(...args) {
+                                output += args.join(' ') + "<br>";
+                                originalConsoleLog.apply(console, args);
+                            };
+                            try {
+                                ${code}
+                            } catch (error) {
+                                output += '<p style="color:red;">Error: ' + error + '</p>';
+                            }
+                            document.body.innerHTML = output;
+                        })();
+                    <\/script>
+                </body>
+                </html>
+            `);
+            iframeDoc.close();
+        }
+
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
 </body>
-</html>
+</html> 

@@ -37,7 +37,7 @@
                 here to support you every step of the way. Dive into our tutorials, take on coding challenges, and bring your ideas to life. 
                 Let's build something amazing together!</p>
     </section>
-
+    
     <!-- Management Team Section -->
      <section id="management" class="management-team-section">
     <h1>MANAGEMENT TEAM</h1>
@@ -111,32 +111,33 @@
         </div>
     </section>
     
-     <section>
-        <section id="lang" class="skills-section">
-            <h1 class="skills-title">Coding Languages</h1>
-            <div class="skills-container">
-                <div class="skills-card">
-                    <a href="index2.html" target="_blank">
-                        <img src="html.png" alt="HTML Icon">
-                    </a>
-                    <h3>HTML</h3>
-                    <p>Master the building blocks of the web. Learn how to structure content effectively using HTML elements, tags, and attributes. <br> Click the Image to Learn more!</p>
-                </div>
-                <div class="skills-card">
-                    <a href="index3.html" target="_blank">
-                        <img src="css.png" alt="CSS Icon">
-                    </a>
-                    <h3>CSS</h3>
-                    <p>Bring your designs to life! Explore how to style and layout web pages with CSS properties, selectors, and responsive techniques. <br> Click the Image to Learn more!</p>
-                </div>
-                <div class="skills-card">
-                    <a href="index4.html" target="_blank">
-                        <img src="js.png" alt="JavaScript Icon">
-                    </a>
-                    <h3>JavaScript</h3>
-                    <p>Unlock the power of interactivity. Learn to create dynamic, engaging, and functional web experiences with JavaScript. <br> Click the Image to Learn more!</p>
-                </div>  
-        </section>  
+    <!-- Coding Languages Section -->   
+    <section id="lang" class="skills-section">
+        <h1 class="skills-title">Coding Languages</h1>
+        <div class="skills-container">
+            <div class="skills-card">
+                <a href="index2.html" target="_blank">
+                    <img src="html.png" alt="HTML Icon">
+                </a>
+                <h3>HTML</h3>
+                <p>Master the building blocks of the web. Learn how to structure content effectively using HTML elements, tags, and attributes. <br> Click the Image to Learn more!</p>
+            </div>
+            <div class="skills-card">
+                <a href="index3.html" target="_blank">
+                    <img src="css.png" alt="CSS Icon">
+                </a>
+                <h3>CSS</h3>
+                <p>Bring your designs to life! Explore how to style and layout web pages with CSS properties, selectors, and responsive techniques. <br> Click the Image to Learn more!</p>
+            </div>
+            <div class="skills-card">
+                <a href="index4.html" target="_blank">
+                    <img src="js.png" alt="JavaScript Icon">
+                </a>
+                <h3>JavaScript</h3>
+                <p>Unlock the power of interactivity. Learn to create dynamic, engaging, and functional web experiences with JavaScript. <br> Click the Image to Learn more!</p>
+            </div>   
+        </div> 
+     </section>
     <!-- Footer Section -->
     <footer>
         <div class="footer-content">
@@ -146,13 +147,33 @@
                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>    </ul>
+                <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>    
+            </ul>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 Learn on Coding. All rights reserved.</p>
         </div>
     </footer>
-   <script src="script.js"></script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    var menuBtn = document.getElementById("menu-btn");
+    var menu = document.getElementById("menu");
+    var menuLinks = document.querySelectorAll("#menu a");
+
+   
+    menuBtn.addEventListener("click", function () {
+        menu.classList.toggle("show");
+    });
+
+ 
+    menuLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+            menu.classList.remove("show");
+        });
+    });
+});
+
+   </script> 
 
 </body>
 </html>
